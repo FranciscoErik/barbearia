@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Barbearia</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="BARBEARIA" class="logo-img">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="booking-container">
+        <div class="booking-form">
+            <div class="barber-selector">
+                <label for="barber-select">Selecionar Barbeiro</label>
+                <select id="barber-select" class="barber-dropdown">
+                    <option value="joao">João</option>
+                    <option value="pedro">Pedro</option>
+                    <option value="carlos">Carlos</option>
+                </select>
+            </div>
+            
+            <div class="prices-section">
+                <h3>Preços</h3>
+                <div class="price-item">
+                    <span>Corte</span>
+                    <span>R$ 30 (30 min)</span>
+                </div>
+                <div class="price-item">
+                    <span>Barba</span>
+                    <span>R$ 20 (30 min)</span>
+                </div>
+                <div class="price-item">
+                    <span>Combo</span>
+                    <span>R$ 50 (1 h)</span>
+                </div>
+                <div class="price-item">
+                    <span>Sobrancelha</span>
+                    <span>R$ 20 (15 min)</span>
+                </div>
+            </div>
+            
+            <div class="week-section">
+                <h3>Semana</h3>
+                <div class="week-selector">
+                    <div class="day-option">
+                        <input type="radio" id="seg" name="day" value="seg" checked>
+                        <span>Seg</span>
+                    </div>
+                    <div class="day-option">
+                        <input type="radio" id="ter" name="day" value="ter">
+                        <span>Ter</span>
+                    </div>
+                    <div class="day-option">
+                        <input type="radio" id="qua" name="day" value="qua">
+                        <span>Qua</span>
+                    </div>
+                    <div class="day-option">
+                        <input type="radio" id="qui" name="day" value="qui">
+                        <span>Qui</span>
+                    </div>
+                    <div class="day-option">
+                        <input type="radio" id="sex" name="day" value="sex">
+                        <span>Sex</span>
+                    </div>
+                </div>
+                
+                <div class="time-slots">
+                    <div class="time-slot available">
+                        <span>08:00</span>
+                        <button class="btn-schedule">Agendar</button>
+                    </div>
+                    <div class="time-slot occupied">
+                        <span>09:00</span>
+                        <button class="btn-occupied">Ocupado</button>
+                    </div>
+                    <div class="time-slot waiting">
+                        <span>10:00</span>
+                        <button class="btn-waiting">Espera</button>
+                    </div>
+                    <div class="time-slot available">
+                        <span>11:00</span>
+                        <button class="btn-schedule">Agendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="booking-summary">
+            <div class="summary-card">
+                <div class="selected-appointment">
+                    <div class="appointment-info">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <span class="barber-name">João</span>
+                            <span class="appointment-time">Qua, 10:00</span>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <span>Barba</span>
+                        <span>R$ 20</span>
+                    </div>
+                    <button class="btn-confirm">Confirma Agendamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
