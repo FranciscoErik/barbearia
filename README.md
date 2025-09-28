@@ -1,6 +1,4 @@
-Aqui está uma versão revisada e organizada do seu README, mantendo todas as informações, mas deixando a formatação mais limpa e profissional:
 
----
 
 # 🪒 Sistema de Agendamento - Barbearia
 
@@ -182,17 +180,6 @@ barbeariau/
 1. Dados não persistem → verificar LocalStorage / limpar cache
 2. Horários não aparecem → verificar data futura / recarregar página
 3. Formulário não envia → campos obrigatórios preenchidos / horário disponível
-
-**Função de limpeza:**
-
-```javascript
-clearAllData();
-```
-
----
-
-
----
 
 ## 📄 Licença
 
