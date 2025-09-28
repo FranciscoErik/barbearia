@@ -185,10 +185,3 @@ barbeariau/
 
 Projeto desenvolvido como iniciativa educacional, disponível para uso educacional e comercial.
 
----
-
-**Desenvolvido com ❤️ para modernizar o agendamento de barbearias**
-
----
-
-Se você quiser, posso também criar **uma versão mais enxuta e visual do README** com badges, ícones e seções colapsáveis para ficar ainda mais profissional para o GitHub. Quer que eu faça?
