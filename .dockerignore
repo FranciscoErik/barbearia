@@ -1,0 +1,43 @@
+# Dependências
+node_modules/
+client/node_modules/
+
+# Banco de dados local
+database/*.db
+
+# Arquivos de ambiente
+config.env
+.env
+*.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentação
+*.md
+!README.md
+
+# Arquivos temporários
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Testes
+test-*.js
+*.test.js
+
+# Outros
+.cursor/
+
+

@@ -1,0 +1,413 @@
+.booking-page {
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  background: #F8F9FA;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Painel Esquerdo */
+.booking-left-panel {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.logo-small {
+  width: 50px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #D4AF37;
+  letter-spacing: 1px;
+}
+
+.panel-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2A2A2A;
+  margin-bottom: 15px;
+}
+
+.barber-select {
+  position: relative;
+}
+
+.barber-dropdown {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+}
+
+.barber-select i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  pointer-events: none;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card {
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.service-card:hover {
+  border-color: #D4AF37;
+}
+
+.service-card.selected {
+  border-color: #4285F4;
+  background: #f0f4ff;
+}
+
+.service-name {
+  font-weight: 600;
+  color: #2A2A2A;
+  margin-bottom: 5px;
+}
+
+.service-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4285F4;
+  margin-bottom: 3px;
+}
+
+.service-duration {
+  font-size: 12px;
+  color: #666;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.week-day {
+  padding: 10px 8px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.week-day:hover {
+  border-color: #4285F4;
+}
+
+.week-day.selected {
+  border-color: #4285F4;
+  background: #4285F4;
+  color: white;
+}
+
+.helper-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Painel Direito */
+.booking-right-panel {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  min-height: 500px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+  text-align: center;
+}
+
+.empty-state i {
+  font-size: 80px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 16px;
+}
+
+.booking-details {
+  margin-bottom: 30px;
+}
+
+.booking-details h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2A2A2A;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #F8F9FA;
+  border-radius: 8px;
+  color: #666;
+}
+
+.detail-item strong {
+  color: #2A2A2A;
+  margin-right: 10px;
+}
+
+.btn-confirm {
+  width: 100%;
+  padding: 15px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.btn-confirm:hover:not(:disabled) {
+  background: #357ae8;
+}
+
+.btn-confirm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.time-slots-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.time-slots-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2A2A2A;
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.time-slot-btn {
+  padding: 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.time-slot-btn.available:hover {
+  border-color: #4285F4;
+  background: #f0f4ff;
+}
+
+.time-slot-btn.selected {
+  border-color: #4285F4;
+  background: #4285F4;
+  color: white;
+}
+
+.time-slot-btn.unavailable {
+  background: #f5f5f5;
+  border-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .booking-container {
+    grid-template-columns: 320px 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .booking-left-panel {
+    order: 1;
+  }
+  
+  .booking-right-panel {
+    order: 2;
+    min-height: auto;
+  }
+  
+  .week-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+
+  .week-day {
+    font-size: 11px;
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 15px;
+  }
+
+  .booking-container {
+    gap: 15px;
+  }
+
+  .booking-left-panel,
+  .booking-right-panel {
+    padding: 15px;
+  }
+
+  .week-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .week-day {
+    font-size: 11px;
+    padding: 10px 5px;
+  }
+  
+  .time-slots-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+  }
+
+  .time-slot-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .services-list {
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 12px;
+  }
+
+  .section-title {
+    font-size: 14px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-page {
+    padding: 10px;
+  }
+
+  .booking-left-panel,
+  .booking-right-panel {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .week-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .time-slot-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .barber-dropdown {
+    font-size: 13px;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .btn-confirm {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .empty-state i {
+    font-size: 60px;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+  }
+}
