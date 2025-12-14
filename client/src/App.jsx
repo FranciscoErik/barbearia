@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/Header';
+import SimulationBooking from './pages/SimulationBooking';
+
+
 
 // Pages
 import Home from './pages/Home';
@@ -37,6 +40,9 @@ function AppContent() {
                   </ProtectedRoute>
                 }
               />
+              <Route path="/simulacao" element={<SimulationBooking />} />
+
+
               
               <Route
                 path="/historico"

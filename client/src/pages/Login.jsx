@@ -85,7 +85,13 @@ const Login = () => {
               <span>OU</span>
             </div>
 
-            <button type="button" className="btn-google" onClick={() => alert('Login com Google será implementado')}>
+            <button
+              type="button"
+              className="btn-google"
+              onClick={() =>
+                alert('Login com Google será implementado')
+              }
+            >
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z" fill="#4285F4"/>
                 <path d="M9 18c2.43 0 4.467-.806 5.965-2.18l-2.908-2.258c-.806.54-1.837.86-3.057.86-2.35 0-4.34-1.587-5.053-3.72H.957v2.332C2.438 15.983 5.482 18 9 18z" fill="#34A853"/>
@@ -96,7 +102,17 @@ const Login = () => {
             </button>
 
             <div className="register-link">
-              <p>Não tem uma conta? <Link to="/register">Cadastre-se aqui</Link></p>
+              <p>
+                Não tem uma conta?{' '}
+                <Link to="/register">Cadastre-se aqui</Link>
+              </p>
+            </div>
+
+            {/* BOTÃO HOME ABAIXO */}
+            <div className="home-link-wrapper">
+              <Link to="/" className="btn-home-link">
+                <i className="fas fa-home"></i> Voltar para Home
+              </Link>
             </div>
           </form>
         </div>
@@ -106,4 +122,3 @@ const Login = () => {
 };
 
 export default Login;
-

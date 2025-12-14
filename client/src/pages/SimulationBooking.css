@@ -1,0 +1,382 @@
+.sim-page {
+  min-height: calc(100vh - 100px);
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.sim-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sim-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sim-header h1 {
+  font-size: 36px;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+.sim-header p {
+  color: #666;
+}
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sim-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.sim-card h3 {
+  font-size: 16px;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+.sim-card select {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid #e1e5e9;
+  outline: none;
+  background: #fff;
+}
+
+.sim-calendar-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ===== Calendário escondido  ===== */
+.calendar-trigger-card {
+  position: relative;
+}
+
+.calendar-trigger {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  color: #2a2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-trigger-text {
+  text-align: left;
+  color: #666;
+}
+
+.calendar-trigger-text.selected {
+  color: #2a2a2a;
+}
+
+.calendar-trigger i {
+  transition: transform 0.2s;
+  color: #b8941f;
+}
+
+.calendar-trigger i.open {
+  transform: rotate(180deg);
+}
+
+.calendar-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  animation: fadeIn 0.18s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calendar-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.calendar-head {
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.cal-subtitle {
+  font-size: 12px;
+  color: #777;
+}
+
+.cal-nav {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #e8ebef;
+  background: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cal-nav:hover {
+  transform: translateY(-1px);
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.cal-day {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #eef1f4;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.cal-day:hover {
+  transform: translateY(-1px);
+}
+
+.cal-day.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.cal-day.today {
+  border-color: rgba(212, 175, 55, 0.55);
+}
+
+.cal-day.selected {
+  background: #d4af37;
+  color: #2a2a2a;
+  border-color: #d4af37;
+}
+
+.cal-hint {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #777;
+  flex-wrap: wrap;
+}
+
+.hint-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.today-dot {
+  border: 2px solid rgba(212, 175, 55, 0.75);
+  background: transparent;
+}
+
+.selected-dot {
+  background: #d4af37;
+}
+
+.disabled-dot {
+  background: #cfd6dd;
+}
+
+/* ===== Horários ===== */
+.time-card {
+  padding: 18px;
+}
+
+.time-empty {
+  padding: 14px;
+  border: 1px dashed #d7dbe0;
+  border-radius: 12px;
+  color: #666;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.time-btn {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #eef1f4;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.time-btn:hover {
+  transform: translateY(-1px);
+}
+
+.time-btn.selected {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #2a2a2a;
+}
+
+/* ===== simulador ===== */
+.sim-preview {
+  margin-top: 18px;
+}
+
+.sim-preview h2 {
+  font-size: 22px;
+  margin: 18px 0 12px;
+  color: #2a2a2a;
+}
+
+.sim-preview-empty {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px dashed #d7dbe0;
+  color: #666;
+}
+
+.sim-preview-box {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.sim-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f2f4;
+  gap: 12px;
+}
+
+.sim-row:last-child {
+  border-bottom: none;
+}
+
+.sim-row span {
+  color: #666;
+}
+
+.sim-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #d4af37;
+  color: #2a2a2a;
+}
+
+.btn-primary:hover {
+  background: #b8941f;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+}
+
+.btn-secondary:hover {
+  background: #d4af37;
+  color: #2a2a2a;
+}
+
+.sim-footnote {
+  margin-top: 12px;
+  color: #777;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .sim-calendar-wrap {
+    grid-template-columns: 1fr;
+  }
+  .time-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sim-grid {
+    grid-template-columns: 1fr;
+  }
+  .time-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

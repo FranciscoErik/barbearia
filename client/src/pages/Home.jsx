@@ -13,23 +13,18 @@ const Home = () => {
           <p className="hero-subtitle">
             Agende seu horário de forma rápida e fácil. Cortes modernos e estilosos para você!
           </p>
-          <div className="hero-buttons">
-            {isAuthenticated && user?.tipo === 'cliente' ? (
-              <Link to="/agendamento" className="btn-primary">
-                <i className="fas fa-calendar-plus"></i> Agendar Agora
-              </Link>
-            ) : (
-              <>
-                <Link to="/login" className="btn-primary">
-                  <i className="fas fa-sign-in-alt"></i> Fazer Login
-                </Link>
-                <Link to="/register" className="btn-secondary">
-                  <i className="fas fa-user-plus"></i> Criar Conta
-                </Link>
-              </>
-            )}
-          </div>
-        </div>
+        <div className="hero-buttons">
+          <Link to="/simulacao" className="btn-primary">
+            <i className="fas fa-calendar-plus"></i> Simular Agendamento
+          </Link>
+
+
+
+          <Link to="/barbeiros" className="btn-secondary">
+            <i className="fas fa-cut"></i> Ver Barbeiros
+          </Link>
+      </div>
+      </div>
       </div>
 
       <section className="features">

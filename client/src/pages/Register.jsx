@@ -11,16 +11,18 @@ const Register = () => {
     password: '',
     confirmPassword: ''
   });
+
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
   const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [e.target.name]: e.target.value
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -42,11 +44,11 @@ const Register = () => {
     try {
       const { confirmPassword, ...userData } = formData;
       const result = await register(userData);
-      
-      if (result.success) {
+
+      if (result?.success) {
         navigate('/agendamento');
       } else {
-        setError(result.message || 'Erro ao registrar');
+        setError(result?.message || 'Erro ao registrar');
       }
     } catch (err) {
       setError('Erro ao registrar. Tente novamente.');
@@ -70,7 +72,7 @@ const Register = () => {
 
           <form onSubmit={handleSubmit} className="register-form">
             {error && <div className="error-message">{error}</div>}
-            
+
             <div className="form-group">
               <label htmlFor="nome">NOME COMPLETO</label>
               <input
@@ -139,6 +141,17 @@ const Register = () => {
             <button type="submit" className="btn-register" disabled={loading}>
               {loading ? 'CADASTRANDO...' : 'CADASTRAR'}
             </button>
+
+            {/* BOTÕES ABAIXO DO CADASTRAR */}
+            <div className="register-footer-buttons">
+              <Link to="/" className="btn-footer-home">
+                <i className="fas fa-home"></i> Home
+              </Link>
+
+              <Link to="/login" className="btn-footer-login">
+                <i className="fas fa-sign-in-alt"></i> Login
+              </Link>
+            </div>
           </form>
         </div>
       </div>
@@ -147,4 +160,3 @@ const Register = () => {
 };
 
 export default Register;
-

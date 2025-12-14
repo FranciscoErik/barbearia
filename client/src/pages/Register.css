@@ -21,7 +21,7 @@
 
 .register-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -48,7 +48,7 @@
   font-size: 32px;
   font-weight: 700;
   margin: 20px 0 10px 0;
-  color: #2A2A2A;
+  color: #2a2a2a;
 }
 
 .register-header p {
@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .form-group {
@@ -114,6 +114,8 @@
   font-size: 14px;
 }
 
+/* BOTÃO PRINCIPAL */
+
 .btn-register {
   width: 100%;
   padding: 18px;
@@ -145,3 +147,65 @@
   cursor: not-allowed;
 }
 
+/* BOTÕES NO RODAPÉ DO FORM */
+
+.register-footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.btn-footer-home,
+.btn-footer-login {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* HOME BUTTON */
+.btn-footer-home {
+  background: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.btn-footer-home:hover {
+  background: #e2e2e2;
+}
+
+/* LOGIN BUTTON */
+.btn-footer-login {
+  background: #6b46c1;
+  color: white;
+  border: 1px solid #6b46c1;
+}
+.btn-footer-login:hover {
+  background: #5936a3;
+}
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 35px 20px;
+  }
+
+  .register-header h2 {
+    font-size: 26px;
+  }
+
+  .btn-footer-home,
+  .btn-footer-login {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
